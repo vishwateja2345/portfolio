@@ -23,6 +23,35 @@ export const myProjects = [
   },
   {
     id: 2,
+    title: "Connectfy",
+    description:
+      "Real-time language exchange platform featuring chat, calls, 32 UI themes, and robust auth.",
+    subDescription: [
+      "Real-time messaging with typing indicators & reactions.",
+      "1-on-1 and group video calls with screen sharing & recording.",
+      "JWT authentication & protected routes.",
+      "Language exchange platform with 32 unique UI themes.",
+      "Tech stack: React, Express, MongoDB, TailwindCSS.",
+      "Error handling across frontend & backend.",
+      "Free deployment. Built with scalable services like Stream.",
+    ],
+    href: {
+      live: "https://connectfy-fty3.onrender.com",
+      github: "",
+    },
+    logo: "",
+    image: "/assets/projects/connectify.png",
+    tags: [
+      { id: 1, name: "React", path: "/assets/logos/react.svg" },
+      { id: 2, name: "Express", path: "/assets/logos/javascript.svg" },
+      { id: 3, name: "MongoDB", path: "/assets/logos/javascript.svg" },
+      { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+      { id: 5, name: "Stream", path: "/assets/logos/react.svg" },
+      { id: 6, name: "JWT", path: "/assets/logos/javascript.svg" },
+    ],
+  },
+  {
+    id: 3,
     title: "URL Shortener",
     description:
       "Full‑stack service to create branded short links with click tracking and basic analytics dashboard.",
@@ -45,7 +74,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Urban Turf",
     description:
       "A modern landing page experience focused on smooth animations, fast loads, and accessible components.",
@@ -67,7 +96,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Weather Forecasting App",
     description:
       "Real‑time weather dashboard that shows current conditions and a 7‑day forecast using the Open‑Meteo API with geolocation‑aware lookups.",
@@ -90,7 +119,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "CEW Network",
     description:
       "Organization website with clean information architecture, responsive layouts, and optimized assets.",

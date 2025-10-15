@@ -16,7 +16,7 @@ const HeroText = () => {
           variants={variants}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 1 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
         >
           Hi, I'm Vishwa Teja
         </motion.h1>
@@ -26,7 +26,7 @@ const HeroText = () => {
             variants={variants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 1.2 }}
+            transition={{ delay: 0.7, duration: 0.6 }}
           >
             Creating Intelligent <br /> Products with
           </motion.p>
@@ -34,7 +34,7 @@ const HeroText = () => {
             variants={variants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 1.5 }}
+            transition={{ delay: 0.9, duration: 0.6 }}
           >
             <FlipWords
               words={words}
@@ -46,7 +46,7 @@ const HeroText = () => {
             variants={variants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 1.8 }}
+            transition={{ delay: 1.1, duration: 0.6 }}
           >
             Solutions
           </motion.p>
@@ -59,7 +59,7 @@ const HeroText = () => {
           variants={variants}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 1 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
         >
           Hi, I'm Vishwa Teja
         </motion.p>
@@ -69,7 +69,7 @@ const HeroText = () => {
             variants={variants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 1.2 }}
+            transition={{ delay: 0.7, duration: 0.6 }}
           >
             Building
           </motion.p>
@@ -77,7 +77,7 @@ const HeroText = () => {
             variants={variants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 1.5 }}
+            transition={{ delay: 0.9, duration: 0.6 }}
           >
             <FlipWords
               words={words}
@@ -89,7 +89,7 @@ const HeroText = () => {
             variants={variants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 1.8 }}
+            transition={{ delay: 1.1, duration: 0.6 }}
           >
             Modern Applications
           </motion.p>
