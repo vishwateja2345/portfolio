@@ -1,6 +1,7 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
+import { memo } from "react";
 
-const ParallaxBackground = () => {
+const ParallaxBackground = memo(() => {
   const { scrollYProgress } = useScroll();
   const x = useSpring(scrollYProgress, { damping: 50 });
   const mountain3Y = useTransform(x, [0, 0.5], ["0%", "70%"]);
@@ -22,7 +23,7 @@ const ParallaxBackground = () => {
         />
         {/* Mountain Layer 3 */}
         <motion.div
-          className="absolute inset-0 -z-40"
+          className="absolute inset-0 -z-40 will-change-transform"
           style={{
             backgroundImage: "url(/assets/mountain-3.png)",
             backgroundPosition: "bottom",
@@ -32,7 +33,7 @@ const ParallaxBackground = () => {
         />
         {/* Planets */}
         <motion.div
-          className="absolute inset-0 -z-30"
+          className="absolute inset-0 -z-30 will-change-transform"
           style={{
             backgroundImage: "url(/assets/planets.png)",
             backgroundPosition: "bottom",
@@ -42,7 +43,7 @@ const ParallaxBackground = () => {
         />
         {/* Mountain Layer 2 */}
         <motion.div
-          className="absolute inset-0 -z-20"
+          className="absolute inset-0 -z-20 will-change-transform"
           style={{
             backgroundImage: "url(/assets/mountain-2.png)",
             backgroundPosition: "bottom",
@@ -50,9 +51,9 @@ const ParallaxBackground = () => {
             y: mountain2Y,
           }}
         />
-        {/* Mountaine Layer 1 */}
+        {/* Mountain Layer 1 */}
         <motion.div
-          className="absolute inset-0 -z-10"
+          className="absolute inset-0 -z-10 will-change-transform"
           style={{
             backgroundImage: "url(/assets/mountain-1.png)",
             backgroundPosition: "bottom",
@@ -63,6 +64,8 @@ const ParallaxBackground = () => {
       </div>
     </section>
   );
-};
+});
+
+ParallaxBackground.displayName = "ParallaxBackground";
 
 export default ParallaxBackground;

@@ -1,23 +1,46 @@
-import React from "react";
+import React, { lazy } from "react";
 import Navbar from "./sections/navbar";
 import Hero from "./sections/Hero";
-import About from "./sections/About";
-import Projects from "./sections/Projects";
-import Experiences from "./sections/Experiences";
-import Testimonial from "./sections/Testimonial";
-import Contact from "./sections/Contact";
-import Footer from './sections/Footer';
+import LazySection from "./components/LazySection";
+import DeferredSection from "./components/DeferredSection";
+
+// Code-split below-fold sections — only loaded when scrolled near
+const About = lazy(() => import("./sections/About"));
+const Projects = lazy(() => import("./sections/Projects"));
+const Experiences = lazy(() => import("./sections/Experiences"));
+const Footer = lazy(() => import("./sections/Footer"));
 
 const App = () => {
   return (
     <div className="container mx-auto max-w-7xl">
+      {/* Critical above-fold — loaded immediately */}
       <Navbar />
       <Hero />
-      <About />
-      <Projects />
-      <Experiences />
 
-      <Footer/>
+      {/* Below-fold sections — deferred until scroll + code-split */}
+      <DeferredSection minHeight="100vh" rootMargin="400px">
+        <LazySection minHeight="100vh">
+          <About />
+        </LazySection>
+      </DeferredSection>
+
+      <DeferredSection minHeight="80vh" rootMargin="300px">
+        <LazySection minHeight="80vh">
+          <Projects />
+        </LazySection>
+      </DeferredSection>
+
+      <DeferredSection minHeight="60vh" rootMargin="300px">
+        <LazySection minHeight="60vh">
+          <Experiences />
+        </LazySection>
+      </DeferredSection>
+
+      <DeferredSection minHeight="4rem" rootMargin="200px">
+        <LazySection minHeight="4rem">
+          <Footer />
+        </LazySection>
+      </DeferredSection>
     </div>
   );
 };

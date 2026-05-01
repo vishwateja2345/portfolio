@@ -1,12 +1,19 @@
-import { useRef } from "react";
+import { useRef, lazy, Suspense, memo } from "react";
 import Card from "../components/Card";
-import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { mySocials } from "../constants";
 import { Frameworks } from "../components/Frameworks";
+import { useInView } from "../hooks/useInView";
+
+// Globe is heavy (cobe library + canvas animation) — only load when visible
+const Globe = lazy(() =>
+  import("../components/globe").then((m) => ({ default: m.Globe }))
+);
 
 const About = () => {
   const grid2Container = useRef();
+  const [globeRef, globeInView] = useInView({ rootMargin: "100px" });
+
   return (
     <section className="c-space section-spacing" id="about">
       <h2 className="text-heading">About Me</h2>
@@ -16,6 +23,9 @@ const About = () => {
           <img
             src="assets/coding-pov.png"
             className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
+            loading="lazy"
+            decoding="async"
+            alt="Coding POV"
           />
           <div className="z-10">
             <p className="headtext">Hi, I'm Vishwa Teja</p>
@@ -90,14 +100,20 @@ const About = () => {
             />
           </div>
         </div>
-        {/* Grid 3 */}
-        <div className="grid-black-color grid-3">
+        {/* Grid 3 — Globe lazy loaded */}
+        <div className="grid-black-color grid-3" ref={globeRef}>
           <div className="z-10 w-[50%]">
             <p className="headtext">Time Zone</p>
             <p className="subtext">Based in IST (UTC+5:30), open to remote work worldwide.</p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
-            <Globe />
+            {globeInView ? (
+              <Suspense fallback={<div className="size-[30rem]" />}>
+                <Globe />
+              </Suspense>
+            ) : (
+              <div className="size-[30rem]" />
+            )}
           </figure>
         </div>
         {/* Grid 4 */}
@@ -117,7 +133,7 @@ const About = () => {
                     rel="noreferrer"
                     className="flex items-center gap-2 px-3 py-2 transition-colors border rounded-md border-white/10 hover:bg-white/10"
                   >
-                    <img src={s.icon} className="w-5 h-5" alt={s.name} />
+                    <img src={s.icon} className="w-5 h-5" alt={s.name} loading="lazy" width={20} height={20} />
                     <span className="text-sm">{s.name}</span>
                   </a>
                 ))}
