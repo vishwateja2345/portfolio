@@ -385,7 +385,7 @@ export const myProjects = [
 
 export const mySocials = [
   { name: "GitHub", href: "https://github.com/vishwateja231", icon: "/assets/logos/github.svg" },
-  { name: "LinkedIn", href: "https://linkedin.com/in/-vishwateja", icon: "/assets/socials/linkedIn.svg" },
+  { name: "LinkedIn", href: "https://linkedin.com/in/vishwateja2345", icon: "/assets/socials/linkedIn.svg" },
   { name: "Instagram", href: "https://instagram.com/_vishwateja", icon: "/assets/socials/instagram.svg" },
 ];
 
