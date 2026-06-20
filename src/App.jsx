@@ -7,7 +7,6 @@ import DeferredSection from "./components/DeferredSection";
 // Code-split below-fold sections — only loaded when scrolled near
 const About = lazy(() => import("./sections/About"));
 const Projects = lazy(() => import("./sections/Projects"));
-const Experiences = lazy(() => import("./sections/Experiences"));
 const Footer = lazy(() => import("./sections/Footer"));
 
 const App = () => {
@@ -27,12 +26,6 @@ const App = () => {
       <DeferredSection minHeight="80vh" rootMargin="300px">
         <LazySection minHeight="80vh">
           <Projects />
-        </LazySection>
-      </DeferredSection>
-
-      <DeferredSection minHeight="60vh" rootMargin="300px">
-        <LazySection minHeight="60vh">
-          <Experiences />
         </LazySection>
       </DeferredSection>
 

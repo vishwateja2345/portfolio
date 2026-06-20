@@ -1,5 +1,122 @@
 export const myProjects = [
   {
+    id: 12,
+    title: "OREON — Maintenance Wizard",
+    category: "aiml",
+    description:
+      "Context-aware intelligent maintenance support system for steel manufacturing — consolidating manuals, SOPs, and sensor data to deliver real-time anomaly alerts, ML-based RUL predictions, NetworkX blast-radius tracing, and LangGraph multi-agent diagnostics.",
+    subDescription: [
+      "An autonomous intelligence layer between sensor and decision: deterministic engines decide, LLMs narrate the evidence.",
+      "Built for the Tata steel-manufacturing AI hackathon with a full decision-support console for maintenance engineers.",
+    ],
+    keyFeatures: [
+      "LangGraph six-agent diagnostic workflow (asset, RUL, root cause, spares, priority, safety)",
+      "RandomForest Remaining Useful Life prediction with 80% confidence bounds",
+      "Deterministic root-cause engine with steel-plant-specific failure modes + evidence cards",
+      "Dual hybrid RAG (ChromaDB dense + BM25 sparse) over manuals, SOPs, and incident history",
+      "NetworkX plant dependency graph for blast-radius and bottleneck tracing",
+      "Real-time SSE telemetry, role-based dashboards, and 3D digital twin",
+    ],
+    techStack: ["FastAPI", "React", "LangGraph", "scikit-learn", "ChromaDB", "PostgreSQL", "Three.js", "Docker"],
+    implementationDetails: [
+      "FastAPI (Python 3.12) backend with async REST, background workers, and SSE telemetry",
+      "LangGraph + LangChain state graph routing Groq llama-3.3-70b and OpenRouter gpt-4o-mini by complexity",
+      "scikit-learn RandomForestRegressor for RUL with severity-capped physical constraints",
+      "NetworkX directed graph modeling plant topology for downstream impact scoring",
+      "Dual-retrieval RAG with Reciprocal Rank Fusion and cosine-similarity reranking",
+      "TanStack Start (React 19 + TypeScript) console with Three.js digital twin, Dockerized deployment",
+    ],
+    href: {
+      github: "https://github.com/vishwateja231/oreon-tata-AI-hackathon",
+    },
+    logo: "",
+    image: "/assets/projects/oreon.png",
+    tags: [
+      { id: 1, name: "FastAPI", path: "/assets/logos/javascript.svg" },
+      { id: 2, name: "React", path: "/assets/logos/react.svg" },
+      { id: 3, name: "LangGraph", path: "/assets/logos/javascript.svg" },
+      { id: 4, name: "scikit-learn", path: "/assets/logos/javascript.svg" },
+    ],
+  },
+  {
+    id: 11,
+    title: "Mailivox",
+    category: "fullstack",
+    description:
+      "Self-hosted outreach intelligence platform that parses LinkedIn profiles, discovers company email patterns, generates verified addresses via SMTP probing, and orchestrates AI-personalized outreach with follow-up automation and reply detection.",
+    subDescription: [
+      "Full-stack engine: LinkedIn extraction → domain discovery → email generation → SMTP validation → AI outreach → delivery tracking.",
+      "Chrome extension (Manifest V3) for live LinkedIn lead extraction with real-time dashboard sync over SSE.",
+    ],
+    keyFeatures: [
+      "Multi-layer domain discovery (override, email seeds, enterprise cache, Clearbit, MX heuristics)",
+      "8-layer SMTP validation pipeline with early-stop and company pattern learning",
+      "AI outreach via Google Gemini with tone presets and production HTML email rendering",
+      "Follow-up automation with reply-based auto-cancel and Gmail threading",
+      "Resend webhook delivery intelligence: bounce protection, open/click/reply tracking",
+      "Chrome extension for quick and deep (1st-degree) LinkedIn lead extraction",
+    ],
+    techStack: ["React", "Express", "Prisma", "PostgreSQL", "Resend", "Gemini", "Chrome Extension"],
+    implementationDetails: [
+      "Express 5 + Prisma 5 backend over an 18-model PostgreSQL (Supabase) schema",
+      "React 19 + Vite 6 dashboard with SSE-driven live updates and Framer Motion UI",
+      "Native Node DNS + net sockets for non-sending RCPT TO SMTP verification with parallel workers",
+      "Resend SDK for delivery with In-Reply-To/References threading and Cloudflare email routing",
+      "Manifest V3 extension with programmatic content-script injection and token auto-capture",
+      "Google Sheets API export with JWT auth and batched, deduplicated writes",
+    ],
+    href: {
+      live: "https://mailivox.vercel.app/",
+      github: "https://github.com/vishwateja231/Mailivox",
+    },
+    logo: "",
+    image: "/assets/projects/mailvox.png",
+    tags: [
+      { id: 1, name: "React", path: "/assets/logos/react.svg" },
+      { id: 2, name: "Express", path: "/assets/logos/javascript.svg" },
+      { id: 3, name: "PostgreSQL", path: "/assets/logos/javascript.svg" },
+      { id: 4, name: "Prisma", path: "/assets/logos/javascript.svg" },
+    ],
+  },
+  {
+    id: 13,
+    title: "Connectfy",
+    category: "fullstack",
+    description:
+      "Real-time chat and video calling application with 1-on-1 and group calls, screen sharing, recording, and 32 unique UI themes — built with React, Express, MongoDB, and Stream APIs. ⭐ 100+ GitHub Stars.",
+    subDescription: [
+      "Real-time messaging with typing indicators and reactions, plus 1-on-1 and group video calls with screen sharing and recording.",
+      "JWT-based authentication with protected routes and a scalable backend architecture.",
+    ],
+    keyFeatures: [
+      "Real-time messaging with typing indicators and reactions",
+      "1-on-1 and group video calls with screen sharing and recording",
+      "JWT authentication with protected routes",
+      "32 unique UI themes",
+      "Comprehensive error handling across frontend and backend",
+    ],
+    techStack: ["React", "Express", "MongoDB", "Stream", "Zustand", "TailwindCSS"],
+    implementationDetails: [
+      "React frontend with Tailwind CSS and Zustand for global state management",
+      "Express + MongoDB backend with JWT authentication and protected routes",
+      "Stream APIs powering real-time chat and video/audio calling",
+      "Group video calls with screen sharing and call recording",
+      "32 switchable UI themes with persistent user preference",
+    ],
+    href: {
+      live: "https://connectfy-fty3.onrender.com/",
+      github: "https://github.com/vishwateja231/connectfy",
+    },
+    logo: "",
+    image: "/assets/projects/connectify.png",
+    tags: [
+      { id: 1, name: "React", path: "/assets/logos/react.svg" },
+      { id: 2, name: "Express", path: "/assets/logos/javascript.svg" },
+      { id: 3, name: "MongoDB", path: "/assets/logos/javascript.svg" },
+      { id: 4, name: "Stream", path: "/assets/logos/javascript.svg" },
+    ],
+  },
+  {
     id: 1,
     title: "Resume ATS Analyzer",
     category: "fullstack",
@@ -387,37 +504,6 @@ export const mySocials = [
   { name: "GitHub", href: "https://github.com/vishwateja231", icon: "/assets/logos/github.svg" },
   { name: "LinkedIn", href: "https://linkedin.com/in/-vishwateja", icon: "/assets/socials/linkedIn.svg" },
   { name: "Instagram", href: "https://instagram.com/_vishwateja", icon: "/assets/socials/instagram.svg" },
-];
-
-export const experiences = [
-  {
-    title: "Full Stack Developer Intern",
-    job: "CodeClause",
-    date: "Mar 2025",
-    contents: [
-      "Built Connectfy — a real-time chat and video calling application using React, Express, MongoDB, and Stream APIs.",
-      "Implemented JWT-based authentication with protected routes and scalable backend architecture.",
-      "Designed a fully responsive UI with Tailwind CSS and Zustand for global state management.",
-      "Developed real-time messaging with typing indicators, reactions, 1-on-1 and group video calls with screen sharing and recording.",
-      "Shipped 32 unique UI themes and comprehensive error handling across frontend and backend.",
-    ],
-    highlight: "⭐ 100+ GitHub Stars",
-    links: {
-      live: "https://connectfy-fty3.onrender.com/",
-      github: "https://github.com/vishwateja231/connectfy",
-    },
-  },
-  {
-    title: "Data Science Intern",
-    job: "National Small Industries Corporation (NSIC)",
-    date: "Jul 2023",
-    contents: [
-      "Built and deployed a house price prediction model achieving >92% accuracy using ensemble methods.",
-      "Performed end-to-end data preprocessing, feature engineering, and exploratory data analysis on 10K+ records.",
-      "Applied hyperparameter tuning (GridSearchCV, RandomizedSearchCV) and k-fold cross-validation for robust model evaluation.",
-      "Identified key pricing drivers including location, square footage, and amenity scores through feature importance analysis.",
-    ],
-  },
 ];
 
 export const reviews = [
