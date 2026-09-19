@@ -27,7 +27,7 @@ export const myProjects = [
       "TanStack Start (React 19 + TypeScript) console with Three.js digital twin, Dockerized deployment",
     ],
     href: {
-      github: "https://github.com/vishwateja231/oreon-tata-AI-hackathon",
+      github: "https://github.com/vishwateja2345/oreon-tata-AI-hackathon",
     },
     logo: "",
     image: "/assets/projects/oreon.png",
@@ -67,7 +67,7 @@ export const myProjects = [
     ],
     href: {
       live: "https://mailivox.vercel.app/",
-      github: "https://github.com/vishwateja231/Mailivox",
+      github: "https://github.com/vishwateja2345/Mailivox",
     },
     logo: "",
     image: "/assets/projects/mailvox.png",
@@ -105,7 +105,7 @@ export const myProjects = [
     ],
     href: {
       live: "https://connectfy-fty3.onrender.com/",
-      github: "https://github.com/vishwateja231/connectfy",
+      github: "https://github.com/vishwateja2345/connectfy",
     },
     logo: "",
     image: "/assets/projects/connectify.png",
@@ -144,7 +144,7 @@ export const myProjects = [
     ],
     href: {
       live: "https://hidani-tech-resume-ats.vercel.app/",
-      github: "https://github.com/vishwateja231/Resume-ATS",
+      github: "https://github.com/vishwateja2345/Resume-ATS",
     },
     logo: "",
     image: "/assets/projects/resume-ats.png",
@@ -182,7 +182,7 @@ export const myProjects = [
     ],
     href: {
       live: "https://ticker-booking-app.vercel.app/login",
-      github: "https://github.com/vishwateja231/ticker-booking-app",
+      github: "https://github.com/vishwateja2345/ticker-booking-app",
     },
     logo: "",
     image: "",
@@ -219,7 +219,7 @@ export const myProjects = [
       "Containerized deployment with Docker Compose for service orchestration",
     ],
     href: {
-      github: "https://github.com/vishwateja231/Smart-Airport-Ride-Pooling-Backend",
+      github: "https://github.com/vishwateja2345/Smart-Airport-Ride-Pooling-Backend",
     },
     logo: "",
     image: "",
@@ -257,7 +257,7 @@ export const myProjects = [
     ],
     href: {
       live: "https://url-shortner-iota-opal.vercel.app/",
-      github: "https://github.com/vishwateja231/Url_shortener",
+      github: "https://github.com/vishwateja2345/Url_shortener",
     },
     logo: "",
     image: "/assets/projects/url_shortner.png",
@@ -296,7 +296,7 @@ export const myProjects = [
     ],
     href: {
       live: "https://urbanturf.vercel.app/",
-      github: "https://github.com/vishwateja231/urbanturf",
+      github: "https://github.com/vishwateja2345/urbanturf",
     },
     logo: "",
     image: "/assets/projects/urban-turn.png",
@@ -334,8 +334,8 @@ export const myProjects = [
       "Flask API serving trained model predictions to the frontend",
     ],
     href: {
-      live: "https://github.com/vishwateja231/gold-price-prediction",
-      github: "https://github.com/vishwateja231/gold-price-prediction",
+      live: "https://github.com/vishwateja2345/gold-price-prediction",
+      github: "https://github.com/vishwateja2345/gold-price-prediction",
     },
     logo: "",
     image: "/assets/projects/gold-price-project.png",
@@ -373,7 +373,7 @@ export const myProjects = [
       "Guardrails for hallucination detection and answer confidence thresholds",
     ],
     href: {
-      github: "https://github.com/vishwateja231/RAG-Document-Q-A",
+      github: "https://github.com/vishwateja2345/RAG-Document-Q-A",
     },
     logo: "",
     image: "",
@@ -412,7 +412,7 @@ export const myProjects = [
     ],
     href: {
       live: "https://dodge-wheat-eight.vercel.app",
-      github: "https://github.com/vishwateja231/GraphQuery",
+      github: "https://github.com/vishwateja2345/GraphQuery",
     },
     logo: "",
     image: "/assets/projects/graph-query.png",
@@ -450,7 +450,7 @@ export const myProjects = [
     ],
     href: {
       live: "https://weather-forecast-001.netlify.app/",
-      github: "https://github.com/vishwateja231/weather-forecasting",
+      github: "https://github.com/vishwateja2345/weather-forecasting",
     },
     logo: "",
     image: "/assets/projects/weather-forcasting.png",
@@ -486,8 +486,8 @@ export const myProjects = [
       "GitHub Pages deployment with custom domain configuration",
     ],
     href: {
-      live: "https://vishwateja231.github.io/CEW-Network/",
-      github: "https://github.com/vishwateja231/CEW-Network",
+      live: "https://vishwateja2345.github.io/CEW-Network/",
+      github: "https://github.com/vishwateja2345/CEW-Network",
     },
     logo: "",
     image: "/assets/projects/cew-network.png",
@@ -501,7 +501,7 @@ export const myProjects = [
 ];
 
 export const mySocials = [
-  { name: "GitHub", href: "https://github.com/vishwateja231", icon: "/assets/logos/github.svg" },
+  { name: "GitHub", href: "https://github.com/vishwateja2345", icon: "/assets/logos/github.svg" },
   { name: "LinkedIn", href: "https://linkedin.com/in/vishwateja2345", icon: "/assets/socials/linkedIn.svg" },
   { name: "Instagram", href: "https://instagram.com/_vishwateja", icon: "/assets/socials/instagram.svg" },
 ];

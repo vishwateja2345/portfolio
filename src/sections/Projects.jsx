@@ -44,7 +44,7 @@ const Projects = () => {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <h2 className="text-heading">My Projects</h2>
         <a
-          href="https://github.com/vishwateja231"
+          href="https://github.com/vishwateja2345"
           target="_blank"
           rel="noreferrer"
           className="text-sm font-medium text-neutral-400 hover:text-white transition-colors duration-200 flex items-center gap-1.5"
